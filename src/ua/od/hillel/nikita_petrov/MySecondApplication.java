@@ -29,13 +29,14 @@ import java.util.Scanner;
 //
 //    }
 //}
-//Number 3
-//public class MySecondApplication {
+// public class MySecondApplication {
 //    public static void main(String[] args) {
-//        System.out.println(foo());
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println(foo(4,10));
+//        }
 //        }
 //    public static int foo (int lower, int upper){
 //        Random random = new Random();
-//        return random.nextInt((lower)+upper+1);
+//        return  random.nextInt((upper-lower)+1)+lower;
 //    }
 //}
