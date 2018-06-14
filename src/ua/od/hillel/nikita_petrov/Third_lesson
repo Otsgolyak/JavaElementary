@@ -1,0 +1,27 @@
+package ua.od.hillel.nikita_petrov;
+
+public class Third_lesson{
+
+    public static void main(String[] args) {
+    }
+    public static int number_of_fibb_element(int number){
+        int this_int = 0;
+        int last_int = 1;
+        for (int i = 0; i < number; i++) {
+            this_int = this_int+last_int;
+            last_int = this_int-last_int;
+        }
+        return this_int;
+    }
+    public static long factaril(int number){
+        int a = number;
+        long result = 1;
+        if (number !=1){
+            for (int i = 0; i < number-1; i++) {
+                result = result*a;
+                a-=1;
+            }
+        }
+        return result;
+    }
+}
