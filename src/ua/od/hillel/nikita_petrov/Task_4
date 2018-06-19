@@ -22,7 +22,7 @@ public class Start {
             if (numberic_from_case_first ==0){
                 checker = false;
             }
-            if(numberic_from_case_first>0 && numberic_from_case_first<4 ){
+            else if(numberic_from_case_first>0 && numberic_from_case_first<4 ){
                     System.out.println("Сколько хотите поменять");
                     double first_money_from_change = first_money.nextDouble();
                     System.out.println("Введите валюту на которую хотите поменять, числа всё те же");
