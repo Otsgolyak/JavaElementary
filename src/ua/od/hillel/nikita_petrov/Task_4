@@ -1,0 +1,55 @@
+package ua.od.hillel.nikita_petrov;
+import java.util.Scanner;
+
+public class Start {
+    public static void main(String[] args) {
+    boolean checker = true;
+    double course[] = {1,26.44,30.6};
+    String names [] = {"Гривны","Долларов","Евро"};
+    while (checker){
+        System.out.println("Доллар - 26.44 грн");
+        System.out.println("Евро 30.6 грн");
+        Scanner first_money = new Scanner(System.in);
+        Scanner first_case_number = new Scanner(System.in);
+        Scanner second_case_number = new Scanner(System.in);
+        try{
+            System.out.println("Выберете валюту которую меняем введя число ");
+            System.out.println("Гривна - 1 ");
+            System.out.println("Доллар - 2 ");
+            System.out.println("Евро - 3 ");
+            System.out.println("Выход - 0");
+            int numberic_from_case_first = first_case_number.nextInt();
+            if (numberic_from_case_first ==0){
+                checker = false;
+            }
+            if(numberic_from_case_first>0 && numberic_from_case_first<4 ){
+                    System.out.println("Сколько хотите поменять");
+                    double first_money_from_change = first_money.nextDouble();
+                    System.out.println("Введите валюту на которую хотите поменять, числа всё те же");
+                    int second_course_numberic = second_case_number.nextInt();
+                    if (second_course_numberic>0 && second_course_numberic<4 ){
+                        double answer = money(first_money_from_change, course, numberic_from_case_first, second_course_numberic);
+                        System.out.println("Вы получите: " + String.format("%.2f",answer)+" "+names[second_course_numberic-1]);
+                    }
+                    else System.out.println("Число не из представленных в списке");}
+            else System.out.println("Число не из представленных в списке");
+
+
+
+        }
+        catch (Exception e){
+            System.out.println("Введите все таки число");
+        }
+
+
+    }
+
+    }
+    public static double money(double money, double course[], int number_case_1, int number_case_2){
+        double money_return = (course[number_case_1-1]*money)/course[number_case_2-1];
+        return money_return;
+
+
+    }
+
+}
